@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-
   const track = document.querySelector(".about-display .display-track");
   let cards = Array.from(track.children);
   const nextButton = document.querySelector(".about-display .display-btn.next");
@@ -9,20 +8,18 @@ document.addEventListener("DOMContentLoaded", function() {
   let cardIndex = 0;
   let isTransitioning = false;
 
-  // Clone first and last cards for seamless looping
-  const firstClone = cards[0].cloneNode(true);
-  const lastClone = cards[cards.length - 1].cloneNode(true);
+  // Duplicate all cards once for seamless infinite loop
+  cards.forEach(card => {
+    const clone = card.cloneNode(true);
+    track.appendChild(clone);
+  });
 
-  track.appendChild(firstClone);
-  track.insertBefore(lastClone, cards[0]);
-
-  cards = Array.from(track.children); // update card list
-  cardIndex = 1; // start at first real card
+  cards = Array.from(track.children);
 
   // Set initial position
-  track.style.transform = `translateX(-${cardWidth * cardIndex}px)`;
+  track.style.transform = `translateX(0px)`;
 
-  // Function to move track
+  // Move to card at index
   function moveToIndex(index) {
     if (isTransitioning) return;
     isTransitioning = true;
@@ -30,46 +27,56 @@ document.addEventListener("DOMContentLoaded", function() {
     track.style.transform = `translateX(-${cardWidth * index}px)`;
   }
 
-  // Handle transition end for looping
+  // Reset track after reaching duplicates
   track.addEventListener("transitionend", () => {
     isTransitioning = false;
-    if (cards[cardIndex] === firstClone) {
+
+    // Forward wrap
+    if (cardIndex >= cards.length / 2) {
       track.style.transition = "none";
-      cardIndex = 1;
+      cardIndex = cardIndex - cards.length / 2;
       track.style.transform = `translateX(-${cardWidth * cardIndex}px)`;
     }
-    if (cards[cardIndex] === lastClone) {
+
+    // Backward wrap
+    if (cardIndex < 0) {
       track.style.transition = "none";
-      cardIndex = cards.length - 2;
+      cardIndex = cardIndex + cards.length / 2;
       track.style.transform = `translateX(-${cardWidth * cardIndex}px)`;
     }
   });
 
-  // Next button
+  // Button navigation
   nextButton.addEventListener("click", () => {
     cardIndex++;
     moveToIndex(cardIndex);
+    resetAutoScroll();
   });
 
-  // Previous button
   prevButton.addEventListener("click", () => {
     cardIndex--;
     moveToIndex(cardIndex);
+    resetAutoScroll();
   });
 
   // Auto-scroll
-  setInterval(() => {
+  let autoScroll = setInterval(() => {
     cardIndex++;
     moveToIndex(cardIndex);
   }, 4000);
 
-  // Update card width on resize
+  function resetAutoScroll() {
+    clearInterval(autoScroll);
+    autoScroll = setInterval(() => {
+      cardIndex++;
+      moveToIndex(cardIndex);
+    }, 4000);
+  }
+
+  // Update card width on window resize
   window.addEventListener("resize", () => {
     cardWidth = cards[0].getBoundingClientRect().width;
     track.style.transition = "none";
     track.style.transform = `translateX(-${cardWidth * cardIndex}px)`;
   });
-  
-track.addEventListener("mouseenter", () => clearInterval(autoScroll));
-track.addEventListener("mouseleave", () => startAutoScroll());
 });
