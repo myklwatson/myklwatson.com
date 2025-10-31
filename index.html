@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--MY CSS STYLE SHEET-->
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <!--STLYESHEET FOR DROPDOWN MENU BUTTON-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--GOOGLE FONT STYLE SHEET-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <title>Michael Watson Studio</title>
+  <link rel="icon" href="/images/fav.png" type="image/png">
+  
+  <!-- MailerLite Universal -->
+  <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '1890064');
+  </script>
+  
+</head>
+
+<body>
+  <header>
+    <div class="navbar"> <!--NAVIGATION-->
+      <div class="logo">
+        <a href="index.html">
+        <img src="images/mwLogo.png"  alt="myklwatson studio logo in black">
+        </a>
+      </div>
+      <ul class="links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="prints.html">PRINTS</a></li>
+        <li><a href="services.html">SERVICES</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+    <div class="dropdown_menu"><!--DROPDOWN MENU-->
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="prints.html">PRINTS</a></li>
+      <li><a href="services.html">SERVICES</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </div> 
+  </header> 
+  <!--DROPDOWN MENU SCRIPT-->
+    <script> 
+      const toggle_Btn = document.querySelector('.toggle_btn') 
+      const toggle_BtnIcon = document.querySelector('.toggle_btn i') 
+      const dropDown_Menu = document.querySelector('.dropdown_menu') 
+      
+      toggle_Btn.onclick = function () { dropDown_Menu.classList.toggle('open') 
+      const isOpen = dropDown_Menu.classList.contains('open') 
+      
+      toggle_BtnIcon.classList = isOpen 
+      ? 'fa-solid fa-xmark' 
+      : 'fa-solid fa-bars'}
+    </script>
+
+  <main>
+    <div class="slideshow"><!--SLIDESHOW SECTION -->
+      <div class="slide">
+        <picture>
+          <source srcset="images/slide1-desktop.jpg" media="(min-width: 992px)">
+          <source srcset="images/slide1-tablet.jpg" media="(min-width: 768px)">
+          <img src="images/slide1-mobile.jpg" alt="Waimarama House Project Image">
+        </picture>
+      </div>
+
+      <div class="slide">
+        <picture>
+          <source srcset="images/slide2-desktop.jpg" media="(min-width: 992px)">
+          <source srcset="images/slide2-tablet.jpg" media="(min-width: 768px)">
+          <img src="images/slide2-mobile.jpg" alt="Mitsubishi Outlander Vehicle Promo Image">
+        </picture>
+      </div>
+
+      <div class="slide">
+        <picture>
+          <source srcset="images/slide3-desktop.jpg" media="(min-width: 992px)">
+          <source srcset="images/slide3-tablet.jpg" media="(min-width: 768px)">
+          <img src="images/slide3-mobile.jpg" alt="Birthday Suit Clothing Hat and T-Shirt Promotional">
+        </picture>
+      </div>
+    </div>
+    
+    <section class="main-section">
+    <div class="me">
+      <div class="me-text">
+        <h1>WELCOME TO MYKL</h1>
+        <p>
+        I’m Michael Watson, a commercial and portrait photographer based in Hawke’s Bay.
+        I create imagery that captures character, story, and atmosphere.
+        </p>
+      </div>
+    
+      <div class="me-image">
+        <img src="images/headshot.png" alt="Michael Watson Headshot">
+      </div> 
+    </div>
+    <br/>
+
+    <section class="product-carousel"><!--PRODUCT CAROUSEL-->
+      <h2>FEATURED PRINTS</h2>
+        <br/>
+        <div class="carousel-container">
+        <div class="carousel-track">
+        
+          <!-- Product Card 1 -->
+          <div class="product-card">
+            <a href="prints.html#cosas">
+            <img src="images/product1.jpg" alt="Colours of Seak and Sky Series Promo Image">
+            <h3>Colours of Sea and Sky Series</h3>
+            <p>Blurred Abstract Landscapes, capturing the beautiful colours of the sea and last light.</p>
+            <span class="price-range">$150 – $350</span>
+            </a>
+          </div>
+
+      <!-- Product Card 2 -->
+      <div class="product-card">
+        <a href="prints.html#landscapes">
+          <img src="images/product2.jpg" alt="NZ Landscape Series promo image">
+          <h3>New Zealand Landscapes</h3>
+          <p>A range of photographs capturing the beauty of New Zealand's lanscapes and features.</p>
+          <span class="price-range">$120 – $320</span>
+        </a>
+      </div>
+
+      <!-- Product Card 3 -->
+      <div class="product-card">
+        <a href="prints.html#bodyscapes">
+          <img src="images/prints/MATT_SCAPE1.jpg" alt="Bodyscapes promo image">
+          <h3>Bodyscape Series</h3>
+          <p>Abstract Landscapes crafted by the human form.</p>
+          <span class="price-range">$120 – $320</span>
+        </a>
+      </div>
+
+      <!-- Product Card 4 -->
+      <div class="product-card">
+        <a href="prints.html#artworks">
+          <img src="images/product4.jpg" alt="Illustrative Artworks Promo Image">
+          <h3>Illustrative Artworks</h3>
+          <p> A range of award winning Illustrative Composite Artworks.</p>
+          <span class="price-range">$150 – $350</span>
+        </a>
+      </div>
+    </div>
+    <!--CAROUSEL CONTROLS-->
+      <button class="carousel-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="carousel-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+  </div>
+
+      
+    </section>
+    
+    
+    <section class="services-section"><!--SERVICES OVERVIEW-->
+      <h2>SERVICES</h2>
+      <br/>
+        <div class="services-mobile">
+        <div class="services-toggle">
+          <div class="service-toggle" data-image="images/portrait.jpg">
+          <h3>Portrait Photography</h3>
+          <br/>
+          <p>Capturing your personality with professional, authentic portraits. 
+          <br/> From Headshots, to Fashion, Fitness and More.</p>
+          <br/>
+        </div>
+      
+      <div class="service-toggle" data-image="images/commercial.jpg">
+        <h3>Commercial Photography</h3>
+        <br/>
+        <p>High-quality imagery to elevate your brand and business.</p>
+        <br/>
+      </div>
+      
+      <div class="service-toggle" data-image="images/creative.jpg">
+        <h3>Creative Projects</h3>
+        <br/>
+        <p>Collaborative photography projects for brands and artists.</p>
+        <br/>  
+      </div>
+      
+    </div>
+    <div class="mobile-image">
+      <img src="images/portrait.jpg" alt=" 'Spontantenous' Theatre Troup Commercial Portrait Promo" id="mobile-service-image">
+    </div>
+  </div>
+
+<!-- Desktop layout -->
+  <div class="services-desktop">
+    <div class="service">
+      <img src="images/portrait.jpg" alt=" 'Spontantenous' Theatre Troup Commercial Portrait Promo" id="mobile-service-image">
+      <h3>Portrait Photography</h3>
+      <br/>
+      <p>Capturing your personality with professional, authentic portraits.</p>
+    <br/>
+  </div>
+    <div class="service">
+      <img src="images/commercial.jpg" alt="Hawkes Bay Real Estate, new build promo">
+      <h3>Commercial Photography</h3>
+      <br/>
+      <p>High-quality imagery to elevate your brand and business.</p>
+      <br/>
+    </div>
+    <div class="service">
+      <img src="images/creative.jpg" alt="The red lady, creative composite artwork">
+      <h3>Creative Projects</h3>
+      <br/>
+      <p>Collaborative photography projects for brands and artists.</p>
+      <br/>
+    </div>
+  </div>
+  <br/>
+  <br/>
+  <a href="contact.html" class="cta-button">GET IN TOUCH</a>
+</div>
+</section>
+
+</main>
+
+  <footer>
+  <div class="footer-container">
+    
+    <!--COL1: STUDIO-->
+    <div class="footer-column">
+      <h4>Michael Watson Studio</h4>
+      <p>Commercial & Portrait Photographer. 
+        <br/>Hawke’s Bay, New Zealand.</p><br/>
+    </div>
+
+    <!--COL2: NAV LINKS-->
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="prints.html">Print Store</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!--COL3: SOCIALS-->
+    <div class="footer-column">
+      <h4>Follow</h4>
+      <p>Follow us for the latest updates</p>
+      <div class="social-icons"><br/>
+        <a href="https://www.facebook.com/myklwatson" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/myklwatson_photo" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/michael-watson-6489a0233/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="mailto:info@myklwatson.com"><i class="fa-regular fa-envelope"></i></a>
+        
+      </div>
+    </div>
+
+    <!--COL4: NEWSLETTER-->
+    <div class="footer-column">
+      <h4>Newsletter</h4>
+      <p>Subscribe to our Newsletter for the latest updates and events.</p><br/>
+      <form class="newsletter-form" action="https://myklwatson.us17.list-manage.com/subscribe/post?u=45921ff06b94e1da628ddb12c&amp;id=30c53dbe4e&amp;f_id=0014f7e3f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self" novalidate=""" method="post">
+        <input type="email" name="EMAIL" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+    <!--SCROLL TO TOP-->
+    <button id="scrollToTopBtn" title="Go to top">
+    <i class="fa-solid fa-chevron-up"></i>
+    </button>
+    </div>
+    <br/>
+    <br/>
+  
+    <!--COPYRIGHT AND PRIVACY-->
+    <div class="footer-bottom">
+    <p>
+      &copy; 2025 Michael Watson. All rights reserved. &nbsp;|
+      <a href="terms.html">Terms</a> |
+      <a href="privacy.html">Privacy Policy</a> | 
+      <a href="statement.html">Authenticity</a>
+    </p>
+    </div>
+  </footer>
+  <script src="js/home.js"></script>
+</body>
+</html>
