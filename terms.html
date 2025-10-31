@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--MY CSS STYLE SHEET-->
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <!--STLYESHEET FOR DROPDOWN MENU BUTTON-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--GOOGLE FONT STYLE SHEET-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <title>Michael Watson Studio | Terms & Conditions</title>
+  <link rel="icon" href="/images/fav.png" type="image/png">
+</head>
+
+<body>
+  <header>
+    <div class="navbar"> <!--NAVIGATION-->
+      <div class="logo">
+        <a href="index.html">
+        <img src="images/mwLogo.png"  alt="myklwatson studio logo in black">
+        </a>
+      </div>
+      <ul class="links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="prints.html">PRINTS</a></li>
+        <li><a href="services.html">SERVICES</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+    <div class="dropdown_menu"><!--DROPDOWN MENU-->
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="prints.html">PRINTS</a></li>
+      <li><a href="services.html">SERVICES</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </div> 
+  </header> 
+  <!--DROPDOWN MENU SCRIPT-->
+    <script> 
+      const toggle_Btn = document.querySelector('.toggle_btn') 
+      const toggle_BtnIcon = document.querySelector('.toggle_btn i') 
+      const dropDown_Menu = document.querySelector('.dropdown_menu') 
+      
+      toggle_Btn.onclick = function () { dropDown_Menu.classList.toggle('open') 
+      const isOpen = dropDown_Menu.classList.contains('open') 
+      
+      toggle_BtnIcon.classList = isOpen 
+      ? 'fa-solid fa-xmark' 
+      : 'fa-solid fa-bars'}
+    </script>
+
+    <main>
+        <div class="terms-container">
+        <h1>Terms and Conditions</h1>
+            <p><strong>Effective Date:</strong> 27 October 2025</p>
+            <p>Welcome to MYKLWATSON Studio. By accessing or using our website myklwatson.com, you agree to comply with and be bound by these Terms and Conditions. Please read them carefully. If you do not agree, you should not use our website.</p>
+    
+        <h2>1. Use of Website</h2>
+            <p>You may use this website only for lawful purposes and in accordance with these Terms. You agree not to:</p>
+        <ul>
+            <li>Engage in any activity that violates applicable laws or regulations</li>
+            <li>Interfere with or disrupt the website, servers, or networks</li>
+            <li>Use our website to transmit harmful or offensive content</li>
+            <li>Attempt to gain unauthorized access to any part of the website</li>
+        </ul>
+
+        <h2>2. Intellectual Property</h2>
+            <p>All content on this website, including images, text, graphics, and logos, is the property of myklwatson studio or its licensors and is protected by copyright and other intellectual property laws. You may not reproduce, distribute, or create derivative works without prior written consent.</p>
+
+        <h2>3. User-Generated Content</h2>
+            <p>If you submit content to our website (e.g., comments, reviews, or other materials), you grant myklwatson studio a non-exclusive, royalty-free, worldwide license to use, modify, and display such content. You are responsible for ensuring your content does not infringe on third-party rights.</p>
+
+        <h2>4. Payments and Services</h2>
+            <p>If you purchase products or services from our website, you agree to provide accurate payment information and comply with all applicable payment terms. Refunds are provided only as stated in our refund policy.</p>
+
+        <h2>5. Disclaimer and Limitation of Liability</h2>
+            <p>Our website and services are provided “as is” without warranties of any kind, either express or implied. myklwatson studio is not liable for any damages arising from the use or inability to use the website, including loss of data, income, or other losses.</p>
+
+        <h2>6. Termination</h2>
+            <p>We reserve the right to suspend or terminate access to the website at our discretion for any violations of these Terms.</p>
+
+        <h2>7. Governing Law</h2>
+            <p>These Terms are governed by the laws of New Zealand. Any disputes arising from these Terms or your use of the website will be resolved in the courts of New Zealand.</p>
+
+        <h2>8. Changes to Terms</h2>
+            <p>We may update these Terms from time to time. Any changes will be posted on this page with the effective date. Continued use of the website constitutes acceptance of the updated Terms.</p>
+
+        <h2>9. Contact Us</h2>
+            <p>If you have questions or concerns about these Terms, please contact us:</p>
+            <p><strong>Email:</strong> <a href="mailto:info@myklwatson.com">info@myklwatson.com</a></p>
+        </div>
+    </main>
+
+    <footer>
+  <div class="footer-container">
+    
+    <!--COL1: STUDIO-->
+    <div class="footer-column">
+      <h4>Michael Watson Studio</h4>
+      <p>Commercial & Portrait Photographer. 
+        <br/>Hawke’s Bay, New Zealand.</p><br/>
+    </div>
+
+    <!--COL2: NAV LINKS-->
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="prints.html">Print Store</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!--COL3: SOCIALS-->
+    <div class="footer-column">
+      <h4>Follow</h4>
+      <p>Follow us for the latest updates</p>
+      <div class="social-icons"><br/>
+        <a href="https://www.facebook.com/myklwatson" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/myklwatson_photo" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/michael-watson-6489a0233/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="mailto:info@myklwatson.com"><i class="fa-regular fa-envelope"></i></a>
+        
+      </div>
+    </div>
+
+    <!--COL4: NEWSLETTER-->
+    <div class="footer-column">
+      <h4>Newsletter</h4>
+      <p>Subscribe to our Newsletter for the latest updates and events.</p><br/>
+      <form class="newsletter-form" action="https://myklwatson.us17.list-manage.com/subscribe/post?u=45921ff06b94e1da628ddb12c&amp;id=30c53dbe4e&amp;f_id=0014f7e3f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self" novalidate=""" method="post">
+        <input type="email" name="EMAIL" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+    <!--SCROLL TO TOP-->
+    <button id="scrollToTopBtn" title="Go to top">
+    <i class="fa-solid fa-chevron-up"></i>
+    </button>
+    </div>
+    <br/>
+    <br/>
+  
+    <!--COPYRIGHT AND PRIVACY-->
+    <div class="footer-bottom">
+    <p>
+      &copy; 2025 Michael Watson. All rights reserved. &nbsp;|
+      <a href="terms.html">Terms</a> |
+      <a href="privacy.html">Privacy Policy</a> | 
+      <a href="statement.html">Authenticity</a>
+    </p>
+    </div>
+  </footer>
+  
+</body>
+</html>

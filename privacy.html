@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--MY CSS STYLE SHEET-->
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <!--STLYESHEET FOR DROPDOWN MENU BUTTON-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--GOOGLE FONT STYLE SHEET-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <title>Michael Watson Studio | Privacy Policy</title>
+  <link rel="icon" href="/images/fav.png" type="image/png">
+</head>
+<body>
+  <header>
+    <div class="navbar"> <!--NAVIGATION-->
+      <div class="logo">
+        <a href="index.html">
+        <img src="images/mwLogo.png"  alt="myklwatson studio logo in black">
+        </a>
+      </div>
+      <ul class="links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="prints.html">PRINTS</a></li>
+        <li><a href="services.html">SERVICES</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+    <div class="dropdown_menu"><!--DROPDOWN MENU-->
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="prints.html">PRINTS</a></li>
+      <li><a href="services.html">SERVICES</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </div> 
+  </header> 
+  <!--DROPDOWN MENU SCRIPT-->
+      <script> 
+      const toggle_Btn = document.querySelector('.toggle_btn') 
+      const toggle_BtnIcon = document.querySelector('.toggle_btn i') 
+      const dropDown_Menu = document.querySelector('.dropdown_menu') 
+      
+      toggle_Btn.onclick = function () { dropDown_Menu.classList.toggle('open') 
+      const isOpen = dropDown_Menu.classList.contains('open') 
+      
+      toggle_BtnIcon.classList = isOpen 
+      ? 'fa-solid fa-xmark' 
+      : 'fa-solid fa-bars'}
+      </script>
+    <main>
+        <div class="privacy-container">
+          <h1>Privacy Policy</h1>
+            <p><strong>Effective Date:</strong> 27 October 2025</p>
+            <p>myklwatson studio (“we,” “us,” or “our”) respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website. By using our website, you agree to the terms of this Privacy Policy.</p>
+    
+          <h2>1. Information We Collect</h2>
+            <p>We may collect the following types of information:</p>
+          <ul>
+            <li><strong>Personal Information:</strong> Name, email address, phone number, billing information, and other information you voluntarily provide when you contact us, sign up for newsletters, or make a purchase.</li>
+            <li><strong>Non-Personal Information:</strong> Browser type, device type, IP address, operating system, pages visited, and other usage information collected automatically.</li>
+            <li><strong>Cookies and Tracking Data:</strong> We use cookies and similar technologies to enhance your experience, analyze trends, and track website usage. You can manage cookies in your browser settings.</li>
+          </ul>
+
+          <h2>2. How We Use Your Information</h2>
+            <p>We use your information to:</p>
+          <ul>
+            <li>Provide and improve our services and website</li>
+            <li>Process transactions and fulfill requests</li>
+            <li>Communicate with you, including updates and promotional materials</li>
+            <li>Analyze website usage to improve functionality</li>
+            <li>Comply with legal obligations</li>
+          </ul>
+
+          <h2>3. How We Share Your Information</h2>
+            <p>We do not sell your personal information. We may share your information with:</p>
+          <ul>
+            <li>Service providers who perform functions on our behalf (e.g., hosting, payment processing, analytics)</li>
+            <li>Legal authorities when required by law or to protect rights</li>
+            <li>Other third parties with your consent</li>
+          </ul>
+
+          <h2>4. Data Security</h2>
+            <p>We implement appropriate technical and organizational measures to protect your personal information. However, no method of transmission over the internet or electronic storage is 100% secure.</p>
+
+          <h2>5. Your Rights</h2>
+            <p>Depending on your location, you may have the following rights:</p>
+          <ul>
+            <li>Access and obtain a copy of your personal information</li>
+            <li>Correct or update your personal information</li>
+            <li>Request deletion of your personal information</li>
+            <li>Opt-out of marketing communications</li>
+            <li>Withdraw consent to our processing of your data</li>
+          </ul>
+            <p>To exercise your rights, please contact us at <a href="mailto:info@myklwatson.com">info@myklwatson.com</a>.</p>
+
+          <h2>6. Data Retention</h2>
+            <p>We retain your personal information only as long as necessary to fulfill the purposes outlined in this Privacy Policy or as required by law.</p>
+
+          <h2>7. Children’s Privacy</h2>
+            <p>Our website is not intended for children under the age of 13. We do not knowingly collect personal information from children.</p>
+
+          <h2>8. Third-Party Links</h2>
+            <p>Our website may include links to third-party websites. We are not responsible for the privacy practices or content of these websites.</p>
+
+          <h2>9. Changes to This Privacy Policy</h2>
+            <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with the effective date. Please review this page periodically for updates.</p>
+
+          <h2>10. Contact Us</h2>
+            <p>If you have questions or concerns about this Privacy Policy or our data practices, please contact us:</p>
+            <p><strong>Email:</strong> <a href="mailto:info@myklwatson.com">info@myklwatson.com</a></p>
+        </div>
+    </main>
+    <footer>
+  <div class="footer-container">
+    
+    <!--COL1: STUDIO-->
+    <div class="footer-column">
+      <h4>Michael Watson Studio</h4>
+      <p>Commercial & Portrait Photographer. 
+        <br/>Hawke’s Bay, New Zealand.</p><br/>
+    </div>
+
+    <!--COL2: NAV LINKS-->
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="prints.html">Print Store</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!--COL3: SOCIALS-->
+    <div class="footer-column">
+      <h4>Follow</h4>
+      <p>Follow us for the latest updates</p>
+      <div class="social-icons"><br/>
+        <a href="https://www.facebook.com/myklwatson" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/myklwatson_photo" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/michael-watson-6489a0233/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="mailto:info@myklwatson.com"><i class="fa-regular fa-envelope"></i></a>
+        
+      </div>
+    </div>
+
+    <!--COL4: NEWSLETTER-->
+    <div class="footer-column">
+      <h4>Newsletter</h4>
+      <p>Subscribe to our Newsletter for the latest updates and events.</p><br/>
+      <form class="newsletter-form" action="https://myklwatson.us17.list-manage.com/subscribe/post?u=45921ff06b94e1da628ddb12c&amp;id=30c53dbe4e&amp;f_id=0014f7e3f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self" novalidate=""" method="post">
+        <input type="email" name="EMAIL" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+    <!--SCROLL TO TOP-->
+    <button id="scrollToTopBtn" title="Go to top">
+    <i class="fa-solid fa-chevron-up"></i>
+    </button>
+    </div>
+    <br/>
+    <br/>
+  
+    <!--COPYRIGHT AND PRIVACY-->
+    <div class="footer-bottom">
+    <p>
+      &copy; 2025 Michael Watson. All rights reserved. &nbsp;|
+      <a href="terms.html">Terms</a> |
+      <a href="privacy.html">Privacy Policy</a> | 
+      <a href="statement.html">Authenticity</a>
+    </p>
+    </div>
+  </footer>
+  
+</body>
+</html>

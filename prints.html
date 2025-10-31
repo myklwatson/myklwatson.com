@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--MY CSS STYLE SHEET-->
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <!--STLYESHEET FOR DROPDOWN MENU BUTTON-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--GOOGLE FONT STYLE SHEET-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <title>Michael Watson Studio | Print Store</title>
+  <link rel="icon" href="/images/fav.png" type="image/png">
+</head>
+<body>
+  <header>
+    <div class="navbar"> <!--NAVIGATION-->
+      <div class="logo">
+        <a href="index.html">
+        <img src="images/mwLogo.png"  alt="myklwatson studio logo in black">
+        </a>
+      </div>
+        <ul class="links">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="prints.html">PRINTS</a></li>
+          <li><a href="services.html">SERVICES</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+          <li class="cart-dropdown">
+            <a href="cart.html" class="cart-icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+             <span class="cart-count">0</span>
+            </a>
+            <div class="cart-dropdown-content"></div>
+            </li>
+        </ul>
+
+        <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+        </div>
+      
+    </div>
+
+    <div class="dropdown_menu"><!--DROPDOWN MENU-->
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="prints.html">PRINTS</a></li>
+        <li><a href="services.html">SERVICES</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        <li><a href="cart.html" class="cart-icon">CART <i class="fa-solid fa-cart-shopping">
+            </i><span class="cart-count"> 0</span></a></li>
+    </div> 
+  </header> 
+  <!--DROPDOWN MENU SCRIPT-->
+    <script> 
+      const toggle_Btn = document.querySelector('.toggle_btn') 
+      const toggle_BtnIcon = document.querySelector('.toggle_btn i') 
+      const dropDown_Menu = document.querySelector('.dropdown_menu') 
+      
+      toggle_Btn.onclick = function () { dropDown_Menu.classList.toggle('open') 
+      const isOpen = dropDown_Menu.classList.contains('open') 
+      
+      toggle_BtnIcon.classList = isOpen 
+      ? 'fa-solid fa-xmark' 
+      : 'fa-solid fa-bars'}
+    </script>
+  <main>
+      <br/>
+      <h1>PRINT STORE</h1>
+      <p></p>
+
+      <div class="print-section">
+      <h2>Colours of Sea and Sky</h2>
+      <div class="print-grid">
+        <div class="print-card" data-product="1">
+          <img src="images/prints/COSAS_1.jpg" alt="Blurred Colours Lanscape print, of a sunset, strip of glowing orange light">
+          <h3>Foxton Sunset</h3>
+          <p>A3 Fine Art Print on ILFORD Archival Paper</p>  
+          <p class="price">$150</p>
+        </div>
+
+        <div class="print-card" data-product="2">
+          <img src="images/prints/COSAS_2.jpg" alt="Blurred Colours Lanscape print, of a sunrise, glowing lava red and purple hues.">
+          <h3>Papamoa Sunrise</h3>
+          <p>A3 Fine Art Print on ILFORD Archival Paper</p>
+          <div class="price">$150</div>
+        </div>
+
+        <div class="print-card" data-product="3">
+          <img src="images/prints/COSAS_3.jpg" alt="Blurred Colours Lanscape print, full glowing line along horizon">
+          <h3>Waimarama Sunrise</h3>
+          <p>A3 Fine Art Print on ILFORD Archival Paper</p>
+          <div class="price">$150</div>
+        </div>
+
+        <div class="print-card" data-product="4">
+          <img src="images/prints/COSAS_4.jpg" alt="Blurred Colours Lanscape print, morning misty colours before dawn">
+          <h3>Morning Mist</h3>
+          <p>A3 Fine Art Print on ILFORD Archival Paper</p>
+          <div class="price">$150</div>
+        </div>
+      </div>
+      </div>
+      <div class="print-section">
+      <h2>New Zealand Landscapes</h2>
+      <div class="print-grid">
+        <div class="print-card" data-product="5">
+          <img src="images/prints/Landscape_1.jpg" alt="Lake Wanaka under streaking stars trails">
+          <h3>Lake Wanaka Star Trails</h3>
+          <p>A3 Fine Art Print on ILFORD Archival Paper</p>
+          <div class="price">$120</div>
+        </div>
+
+        <div class="print-card" data-product="6">
+          <img src="images/prints/Landscape_2.jpg" alt="long exposure of waihi fall, outside Dannevirk, creates smooth running water">
+          <h3>Waihi Falls - Manawatu</h3>
+          <p>A3 Fine Art Print on ILFORD Archival Paper</p>
+          <div class="price">$120</div>
+        </div>
+
+        <div class="print-card" data-product="7">
+          <img src="images/prints/landscape_3.jpg" alt="rolling hills of hawkes bay under moon light">
+          <h3>Waimarama Night Sky</h3>
+          <p>A3 Fine Art Print on ILFORD Archival Paper</p>
+          <div class="price">$120</div>
+        </div>
+
+        <div class="print-card" data-product="8">
+          <img src="images/prints/landscape_5.jpg" alt="Famous tree in lake wanaka at sunset facing mountain ranges.">
+          <h3>That Wanaka Tree</h3>
+          <p>A3 Fine Art Print on ILFORD Archival Paper</p>
+          <div class="price">$120</div>
+        </div>
+      </div>
+    </div>
+    <div class="print-section">
+      <h2>Bodyscapes</h2>
+      <div class="print-grid">
+        <div class="print-card" data-product="9">
+          <img src="images/prints/MATT_SCAPE1.jpg" alt="bright landscape shape create by human body back and shoulder">
+          <h3>Shoulder</h3>
+          <p>A3 Fine Art Print on ILFORD Archival Paper</p>
+          <div class="price">$120</div>
+        </div>
+
+        <div class="print-card" data-product="10">
+          <img src="images/prints/MATT_SCAPE2.jpg" alt="moody landscape shape create by human body abdomens">
+          <h3>Abdomen</h3>
+          <p>A3 Fine Art Print on ILFORD Archival Paper</p>
+          <div class="price">$120</div>
+        </div>
+
+        <div class="print-card" data-product="11">
+          <img src="images/prints/MATT_SCAPE3.jpg" alt="landscape shape create by human body, with sunset">
+          <h3>Glutes and Back</h3>
+          <p>A3 Fine Art Print on ILFORD Archival Paper</p>
+          <div class="price">$120</div>
+        </div>
+
+        <div class="print-card" data-product="12">
+          <img src="images/prints/MATT_SCAPE4.jpg" alt="landscape shape create by human body, using the tight skin over ribcage">
+          <h3>Ribcage</h3>
+          <p>A3 Fine Art Print on ILFORD Archival Paper</p>
+          <div class="price">$120</div>
+        </div>
+      </div>
+    </div>
+    <div class="print-section">
+      <h2>Illustrative Artworks</h2>
+      <div class="print-grid">
+        <div class="print-card" data-product="13">
+          <img src="images/prints/Ill_1.jpg" alt="creative image of man floating in beam of light">
+          <h3>Ascent</h3>
+          <p>A3 Fine Art Print on ILFORD Archival Paper</p>
+          <div class="price">$150</div>
+        </div>
+
+        <div class="print-card" data-product="14">
+          <img src="images/prints/Ill_2.jpg" alt="male figure bound with ropes of glowing light">
+          <h3>Bound</h3>
+          <p>A3 Fine Art Print on ILFORD Archival Paper</p>
+          <div class="price">$150</div>
+        </div>
+
+        <div class="print-card" data-product="15">
+          <img src="images/prints/Ill_3.jpg" alt="floating witch, clothed in red strands of fabric">
+          <h3>The Red Lady</h3>
+          <p>A3 Fine Art Print on ILFORD Archival Paper</p>
+          <div class="price">$150</div>
+        </div>
+
+        <div class="print-card" data-product="16">
+          <img src="images/prints/Ill_4.jpg" alt="creative hexagon image, like a 3D cube of a living room.">
+          <h3>ISO</h3>
+          <p>A3 Fine Art Print on ILFORD Archival Paper</p>
+          <div class="price">$150</div>
+        </div>
+      </div>
+    
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="lightbox">
+      <div class="lightbox-content">
+        <span class="close">&times;</span>
+
+        <div class="lightbox-images">
+          <img src="" alt="" id="lightbox-main-img">
+          <div class="lightbox-thumbs" id="lightbox-thumbs"></div>
+        </div>
+
+        <div class="lightbox-info">
+          <h2 id="print-title"></h2>
+          <br/>
+          <p id="print-desc"></p>
+          
+          <br/>
+          <!-- Option Selector -->
+        <label for="print-option">Choose a print type:</label>
+          <select id="print-option">
+          <option value="unframed">Unframed Print</option>
+          <option value="matted">Matted Print</option>
+          <option value="framed">Framed Print - Black Exhibition</option>
+          <option value="framed">Framed Print - White Exhibition</option>
+          </select>
+          <br/>
+          <div id="print-price"></div><br/>
+              <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <br/>
+    </div>
+
+  
+  </main>
+  <footer>
+  <div class="footer-container">
+    
+    <!--COL1: STUDIO-->
+    <div class="footer-column">
+      <h4>Michael Watson Studio</h4>
+      <p>Commercial & Portrait Photographer. 
+        <br/>Hawke’s Bay, New Zealand.</p><br/>
+    </div>
+
+    <!--COL2: NAV LINKS-->
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="prints.html">Print Store</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!--COL3: SOCIALS-->
+    <div class="footer-column">
+      <h4>Follow</h4>
+      <p>Follow us for the latest updates</p>
+      <div class="social-icons"><br/>
+        <a href="https://www.facebook.com/myklwatson" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/myklwatson_photo" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/michael-watson-6489a0233/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="mailto:info@myklwatson.com"><i class="fa-regular fa-envelope"></i></a>
+        
+      </div>
+    </div>
+
+    <!--COL4: NEWSLETTER-->
+    <div class="footer-column">
+      <h4>Newsletter</h4>
+      <p>Subscribe to our Newsletter for the latest updates and events.</p><br/>
+      <form class="newsletter-form" action="https://myklwatson.us17.list-manage.com/subscribe/post?u=45921ff06b94e1da628ddb12c&amp;id=30c53dbe4e&amp;f_id=0014f7e3f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self" novalidate=""" method="post">
+        <input type="email" name="EMAIL" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+    <!--SCROLL TO TOP-->
+    <button id="scrollToTopBtn" title="Go to top">
+    <i class="fa-solid fa-chevron-up"></i>
+    </button>
+    </div>
+    <br/>
+    <br/>
+  
+    <!--COPYRIGHT AND PRIVACY-->
+    <div class="footer-bottom">
+    <p>
+      &copy; 2025 Michael Watson. All rights reserved. &nbsp;|
+      <a href="terms.html">Terms</a> |
+      <a href="privacy.html">Privacy Policy</a> | 
+      <a href="statement.html">Authenticity</a>
+    </p>
+    </div>
+  </footer>
+  <script src="js/prints.js"></script>
+</body>
+</html>
