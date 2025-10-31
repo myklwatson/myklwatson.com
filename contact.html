@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--MY CSS STYLE SHEET-->
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <!--STLYESHEET FOR DROPDOWN MENU BUTTON-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--GOOGLE FONT STYLE SHEET-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <title>Michael Watson Studio | Contact</title>
+  <link rel="icon" href="/images/fav.png" type="image/png">
+</head>
+<body>
+  <header>
+    <div class="navbar"> <!--NAVIGATION-->
+      <div class="logo">
+        <a href="index.html">
+        <img src="images/mwLogo.png"  alt="myklwatson studio logo in black">
+        </a>
+      </div>
+      <ul class="links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="prints.html">PRINTS</a></li>
+        <li><a href="services.html">SERVICES</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+    <div class="dropdown_menu"><!--DROPDOWN MENU-->
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="prints.html">PRINTS</a></li>
+      <li><a href="services.html">SERVICES</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </div> 
+  </header> 
+  <!--DROPDOWN MENU SCRIPT-->
+    <script> 
+      const toggle_Btn = document.querySelector('.toggle_btn') 
+      const toggle_BtnIcon = document.querySelector('.toggle_btn i') 
+      const dropDown_Menu = document.querySelector('.dropdown_menu') 
+      
+      toggle_Btn.onclick = function () { dropDown_Menu.classList.toggle('open') 
+      const isOpen = dropDown_Menu.classList.contains('open') 
+      
+      toggle_BtnIcon.classList = isOpen 
+      ? 'fa-solid fa-xmark' 
+      : 'fa-solid fa-bars'}
+    </script>
+  <main>
+    <p></p>
+    <section class="contact-container">
+    <div class="contact"><!--CONTACT INFO CONTAINER-->
+      <h1>CONTACT MYKL</h1>
+      <br/>
+        <p>Whether you’re after portraits, brand imagery, or creative collaboration, I’d be happy to hear from you.
+        </p>
+        <br/>
+        <!--CONTACT FORM-->
+        <form id="contact-form" action="https://formspree.io/f/xkgqqjdg" method="POST">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required 
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="_replyto" required />
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Enquiry Type</label>
+            <select id="subject" name="subject" required>
+              <option value="" disabled selected>Select a subject</option>
+              <option value="portrait">Portrait Photography</option>
+              <option value="commercial">Commercial Photography</option>
+              <option value="general">General Enquiry</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="8" required>
+          </textarea>
+        </div>
+
+    <button type="submit">Send Message</button>
+    <p id="form-status"></p>
+    </form>
+    </div>
+
+    <div class="map"><!--GOOGLEMAPS-->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5152.302620439268!2d176.8266282!3d-39.6456534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d69cb106abc26ff%3A0x47d65c30cdcbc6ab!2s1015A%20Southland%20Road%2C%20Raureka%2C%20Hastings%204120!5e1!3m2!1sen!2snz!4v1760075492412!5m2!1sen!2snz" width=100% height="100%" style="border:1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    </section>
+    <div class="contact-info">
+      <p>I’m proud to call Hawke’s Bay home and work with clients across New Zealand.<br/>
+      Check out our range of services we have on offer, or enquire through the form above.</p>
+    </div>
+    <br/>
+  </main>
+  <footer>
+  <div class="footer-container">
+    
+    <!--COL1: STUDIO-->
+    <div class="footer-column">
+      <h4>Michael Watson Studio</h4>
+      <p>Commercial & Portrait Photographer. 
+        <br/>Hawke’s Bay, New Zealand.</p><br/>
+    </div>
+
+    <!--COL2: NAV LINKS-->
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="prints.html">Print Store</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!--COL3: SOCIALS-->
+    <div class="footer-column">
+      <h4>Follow</h4>
+      <p>Follow us for the latest updates</p>
+      <div class="social-icons"><br/>
+        <a href="https://www.facebook.com/myklwatson" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/myklwatson_photo" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/michael-watson-6489a0233/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="mailto:info@myklwatson.com"><i class="fa-regular fa-envelope"></i></a>
+        
+      </div>
+    </div>
+
+    <!--COL4: NEWSLETTER-->
+    <div class="footer-column">
+      <h4>Newsletter</h4>
+      <p>Subscribe to our Newsletter for the latest updates and events.</p><br/>
+      <form class="newsletter-form" action="https://myklwatson.us17.list-manage.com/subscribe/post?u=45921ff06b94e1da628ddb12c&amp;id=30c53dbe4e&amp;f_id=0014f7e3f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self" novalidate=""" method="post">
+        <input type="email" name="EMAIL" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+    <!--SCROLL TO TOP-->
+    <button id="scrollToTopBtn" title="Go to top">
+    <i class="fa-solid fa-chevron-up"></i>
+    </button>
+    </div>
+    <br/>
+    <br/>
+  
+    <!--COPYRIGHT AND PRIVACY-->
+    <div class="footer-bottom">
+    <p>
+      &copy; 2025 Michael Watson. All rights reserved. &nbsp;|
+      <a href="terms.html">Terms</a> |
+      <a href="privacy.html">Privacy Policy</a> | 
+      <a href="statement.html">Authenticity</a>
+    </p>
+    </div>
+  </footer>
+  <script src="js/contact.js"></script>
+</body>
+</html>

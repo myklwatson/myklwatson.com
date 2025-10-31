@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--MY CSS STYLE SHEET-->
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <!--STLYESHEET FOR DROPDOWN MENU BUTTON-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--GOOGLE FONT STYLE SHEET-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <title>Michael Watson Studio | About</title>
+  <link rel="icon" href="/images/fav.png" type="image/png">
+</head>
+<body class="about-page">
+
+  <header>
+    <div class="navbar"> <!--NAVIGATION-->
+      <div class="logo">
+        <a href="index.html">
+        <img src="images/mwLogo.png"  alt="myklwatson studio logo in black">
+        </a>
+      </div>
+      <ul class="links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="prints.html">PRINTS</a></li>
+        <li><a href="services.html">SERVICES</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+    <div class="dropdown_menu"><!--DROPDOWN MENU-->
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="prints.html">PRINTS</a></li>
+      <li><a href="services.html">SERVICES</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </div> 
+  </header> 
+  <!--DROPDOWN MENU SCRIPT-->
+    <script> 
+      const toggle_Btn = document.querySelector('.toggle_btn') 
+      const toggle_BtnIcon = document.querySelector('.toggle_btn i') 
+      const dropDown_Menu = document.querySelector('.dropdown_menu') 
+      
+      toggle_Btn.onclick = function () { dropDown_Menu.classList.toggle('open') 
+      const isOpen = dropDown_Menu.classList.contains('open') 
+      
+      toggle_BtnIcon.classList = isOpen 
+      ? 'fa-solid fa-xmark' 
+      : 'fa-solid fa-bars'}
+    </script>
+  <main>
+      <p></p>
+     <section class="about-me-section">
+      <div class="about-me-content">
+        <h1>ABOUT MYKL</h1><br/>
+      <img src="images/about/me.jpg" alt="Portrait of Photographer Michael Watson" class="about-me-image">
+
+        <br/>
+        <div class="about-me-text">
+          <p>
+            I’m a photographer with a natural, cinematic style, driven by an observational approach that focuses on form, light, and authenticity. My work is about connection; helping people and brands express their identity with confidence, honesty, and strength.</p>
+            
+            <br/>
+            Whether I’m working with a vibrant New Zealand business or creating a portrait that captures an individual’s story, I aim to reflect genuine character and emotion. Every project is a collaboration built on trust, curiosity, and shared purpose.
+            <br/>
+            <br/>
+            Based in Hawke’s Bay, I often travel for commissions across New Zealand, photographing everything from commercial campaigns to creative personal projects. What motivates me most is celebrating people; their journeys, achievements, and the craft that shapes their work.
+          </p>
+          </div>
+        <a href="contact.html" class="cta-button">GET IN TOUCH</a>
+        </div>
+      </section>
+      <section class="about-display">
+        <div class="about-display" role="region" aria-label="Gallery carousel">
+          <div class="display-track">
+            <div class="display-card" role="group" aria-roledescription="slide" aria-label="Slide 1 of 7"><img src="images/about/aboutslide1.jpg" alt="Fashion image using bright pink and blue lighting"></div>
+            <div class="display-card" role="group" aria-roledescription="slide" aria-label="Slide 2 of 7"><img src="images/about/aboutslide2.jpg" alt="NZ Waterfall image Piha"></div>
+            <div class="display-card" role="group" aria-roledescription="slide" aria-label="Slide 3 of 7"><img src="images/about/aboutslide3.jpg" alt="Fashion Portrait of Man wearing Jack Willis T-Shirt "></div>
+            <div class="display-card" role="group" aria-roledescription="slide" aria-label="Slide 4 of 7"><img src="images/about/aboutslide4.jpg" alt="Remuera Cafe Knead promo shows busy cafe and bakery counter"></div>
+            <div class="display-card" role="group" aria-roledescription="slide" aria-label="Slide 5 of 7"><img src="images/about/aboutslide5.jpg" alt="Black Sand Beach drone shot, with lone underwear clad male figure"></div>
+            <div class="display-card" role="group" aria-roledescription="slide" aria-label="Slide 6 of 7"><img src="images/about/aboutslide7.jpg" alt="Snow covered hill with lone tree"></div>
+            <div class="display-card" role="group" aria-roledescription="slide" aria-label="Slide 7 of 7"><img src="images/about/aboutslide8.jpg" alt="Male model in Chulo Boxer Briefs, underwear promo"></div>
+          </div>
+        </div>
+
+        <button class="display-btn prev" aria-label="Previous slide">&#10094;</button>
+        <button class="display-btn next" aria-label="Next slide">&#10095;</button>
+      </section>
+
+  </main>
+  <footer>
+  <div class="footer-container">
+    
+    <!--COL1: STUDIO-->
+    <div class="footer-column">
+      <h4>Michael Watson Studio</h4>
+      <p>Commercial & Portrait Photographer. 
+        <br/>Hawke’s Bay, New Zealand.</p><br/>
+    </div>
+
+    <!--COL2: NAV LINKS-->
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="prints.html">Print Store</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!--COL3: SOCIALS-->
+    <div class="footer-column">
+      <h4>Follow</h4>
+      <p>Follow us for the latest updates</p>
+      <div class="social-icons"><br/>
+        <a href="https://www.facebook.com/myklwatson" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/myklwatson_photo" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/michael-watson-6489a0233/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="mailto:info@myklwatson.com"><i class="fa-regular fa-envelope"></i></a>
+        
+      </div>
+    </div>
+
+    <!--COL4: NEWSLETTER-->
+    <div class="footer-column">
+      <h4>Newsletter</h4>
+      <p>Subscribe to our Newsletter for the latest updates and events.</p><br/>
+      <form class="newsletter-form" action="https://myklwatson.us17.list-manage.com/subscribe/post?u=45921ff06b94e1da628ddb12c&amp;id=30c53dbe4e&amp;f_id=0014f7e3f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self" novalidate=""" method="post">
+        <input type="email" name="EMAIL" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+    <!--SCROLL TO TOP-->
+    <button id="scrollToTopBtn" title="Go to top">
+    <i class="fa-solid fa-chevron-up"></i>
+    </button>
+    </div>
+    <br/>
+    <br/>
+  
+    <!--COPYRIGHT AND PRIVACY-->
+    <div class="footer-bottom">
+    <p>
+      &copy; 2025 Michael Watson. All rights reserved. &nbsp;|
+      <a href="terms.html">Terms</a> |
+      <a href="privacy.html">Privacy Policy</a> | 
+      <a href="statement.html">Authenticity</a>
+    </p>
+    </div>
+  </footer>
+  <script src="js/about.js"></script>
+</body>
+</html>
