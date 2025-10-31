@@ -442,56 +442,60 @@ section {
 .about-display {
   position: relative;
   width: 100%;
-  height: 50vh;           /* adjust as needed */
   overflow: hidden;
-  background: #000;
 }
 
-.about-display .display-track {
+.display-track {
   display: flex;
-  transition: transform 0.5s ease-in-out;
-  height: 100%;
-  gap: 0;
+  transition: transform 0.6s ease-in-out;
+  gap: 0; /* no gaps between cards */
 }
 
-.about-display .display-card {
-  flex: 0 0 auto;        /* prevent shrinking/growing */
-  width: 100%;            /* mobile: 1 card visible */
-  height: 100%;
+.display-card {
+  flex: 0 0 100%; /* full width on mobile */
+  max-width: 100%;
+  height: 300px; /* default height on mobile */
+  position: relative;
 }
 
-.about-display .display-card img {
+.display-card img {
   width: 100%;
   height: 100%;
-  object-fit: cover;      /* fills card while maintaining aspect */
+  object-fit: cover; /* fill card without distortion */
   display: block;
 }
 
-/* -- BUTTONS -- */
-.about-display .display-btn {
+/* -- BUTTONS-- */
+.display-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   background: rgba(0,0,0,0.3);
   color: #fff;
   border: none;
+  font-size: 1.5rem;
   width: 50px;
   height: 50px;
-  border-radius: 8px;
+  border-radius: 12px;
   cursor: pointer;
-  z-index: 10;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transition: background 0.3s ease;
 }
-.about-display .display-btn.prev { left: 1rem; }
-.about-display .display-btn.next { right: 1rem; }
-.about-display .display-btn:hover {
+
+.display-btn:hover {
   background: #1c8193;
 }
 
+.display-btn.prev {
+  left: 10px;
+}
 
-
+.display-btn.next {
+  right: 10px;
+}
 /* -- PRINT STORE  -- */
 .print-section {
   margin: 40px auto;
@@ -1093,8 +1097,9 @@ footer {
   .video-container {
     width: 70%;           /* smaller container on tablets/desktops */
   }
-  .about-display .display-card {
-    width: 50%;           /* 2 cards visible */
+ .display-card {
+    flex: 0 0 50%; /* 2 cards visible */
+    height: 400px;
   }
   
   .services-blurb {
@@ -1246,9 +1251,11 @@ footer {
   .about-me-text {
     max-width: 700px;
   }
-  .about-display .display-card {
-    width: 25%;           /* 4 cards visible */
+  .display-card {
+    flex: 0 0 25%; /* 4 cards visible */
+    height: 500px;
   }
+  
   .services-blurb {
     max-width: 900px;      /* Wider container for desktop */
     padding: 3rem;
